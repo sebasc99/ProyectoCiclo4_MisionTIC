@@ -27,9 +27,9 @@ const proyectosSchema = new Schema(
     nombrelider: String,
     estadoproyecto: String,
     faseProyecto: String,
-    fechadeinicio: String,
-    fechadeterminacion: String,
-    Avances: [AvanceSchema],
+    fechadeinicio: Date,
+    fechadeterminacion: Date,
+    avances: [AvanceSchema],
     inscripciones: [inscripcionSchema]
 
   },
