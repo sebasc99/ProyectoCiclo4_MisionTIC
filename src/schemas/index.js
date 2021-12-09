@@ -3,17 +3,14 @@ const { SchemaComposer } = require('graphql-compose');
 
 const schemaComposer = new SchemaComposer();
 
-const { UserQuery, UserMutation } = require('./user');
-const { BookQuery, BookMutation } = require('./book');
+const { UsuarioQuery, UsuarioMutation} = require('./usuario');
 
 schemaComposer.Query.addFields({
-    ...UserQuery,
-    ...BookQuery,
+    ...UsuarioQuery,
 });
 
 schemaComposer.Mutation.addFields({
-    ...UserMutation,
-    ...BookMutation,
+    ...UsuarioMutation,
 });
 
 module.exports = schemaComposer.buildSchema();
